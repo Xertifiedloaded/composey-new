@@ -38,8 +38,7 @@ for (let i = 0; i < lifeImg.length; i++) {
 
 
 left.addEventListener("click", () => {
-    if (gallery.scrollLeft == 150) {
-    }
+   
     gallery.scrollLeft += 150
 })
 right.addEventListener("click", () => {
@@ -49,7 +48,7 @@ right.addEventListener("click", () => {
 // change backgroumd whenever i click it
 
 slideIndicator.forEach(newSlide => {
-    newSlide.style.background = "red"
+   
     newSlide.style.color = "blue"
     console.log("h1111111111")
 

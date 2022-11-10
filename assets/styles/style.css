@@ -864,17 +864,29 @@ sup {
     .team-box>.members {
         width: 100%;
     }
-.flex{
-    width: 100%;
-    display: block;
 
-}
-.flex>.flex-items{
-    width: 100%;
-}
+    .flex {
+        width: 100%;
+        display: block;
 
+    }
 
+    .flex>.flex-items {
+        width: 100%;
+    }
 
+    .fa-chevron-left {
+        left: -7%;
+    }
+
+    .fa-chevron-right {
+        left: 100%;
+    }
+
+    .chevron {
+        font-size: 18px;
+        top: 50%;
+    }
 
 
 }
