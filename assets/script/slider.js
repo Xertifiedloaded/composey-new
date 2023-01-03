@@ -2,23 +2,24 @@
 let slider = document.querySelector(".slider-box")
 let indicatorImg = document.querySelectorAll(".indicator-btn")
 indicatorImg.forEach(btn => {
-    // if (btn.classList.contains("active")) {
-    //     btn.classList.remove("active")
-    // }
     btn.addEventListener("click", () => {
-
-        btn.classList.remove("active")
-        // console.log(btn.previousSibling)
+        indicatorImg.forEach((e) => {
+            e.classList.remove("active")
+        })
         btn.classList.add("active")
-        console.log(btn.previousElementSibling)
-        btn.previousElementSibling.classList.remove("active")
-        btn.nextElementSibling.classList.remove("active")
         let src = btn.getAttribute("data-src")
-        console.log("hiiiii it works")
         slider.style.backgroundImage = 'url("' + src + '")'
     })
 })
 
+let navChanged = document.querySelector(".header")
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+    }
+    else {
+    
+    }
+})
 // //// image with controller left and right
 let lifeImg = document.querySelectorAll(".lifeimg")
 let currentImg = document.querySelector("#curingImg")
@@ -38,7 +39,7 @@ for (let i = 0; i < lifeImg.length; i++) {
 
 
 left.addEventListener("click", () => {
-   
+
     gallery.scrollLeft += 150
 })
 right.addEventListener("click", () => {
@@ -48,7 +49,6 @@ right.addEventListener("click", () => {
 // change backgroumd whenever i click it
 
 slideIndicator.forEach(newSlide => {
-   
     newSlide.style.color = "blue"
     console.log("h1111111111")
 
@@ -134,6 +134,20 @@ switch (newMonth) {
         break;
 
 }
+
+// responsiveness wwith js
+
+// let flexCard = document.querySelector(".flex-card")
+
+// window.addEventListener("DOMContentLoaded", () => {
+//     let query = window.matchMedia("(max-width:600px)")
+//     if (query.matches) {
+//         document.querySelector(".fa-bars").style.color = "red"
+
+//         // document.querySelector(".card-item").style
+//     }
+
+// })
 function myStyle() {
     days.forEach(newDay => {
         newDay.textContent = daysOfTheWeek
@@ -179,18 +193,14 @@ function myStyle() {
 
 myStyle()
 
-
-// responsiveness wwith js
-
-let flexCard = document.querySelector(".flex-card")
-
-window.addEventListener("DOMContentLoaded", () => {
-    let query = window.matchMedia("(max-width:600px)")
-    if (query.matches) {
-        document.querySelector(".fa-bars").style.color = "red"
-
-        // document.querySelector(".card-item").style
+let header = document.querySelector(".header")
+console.log("this is my header")
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        header.classList.add("header-active")
+        console.log("are you mad")
+    } else {
+        header.classList.remove("header-active")
+        console.log("are you nut")
     }
-
 })
-

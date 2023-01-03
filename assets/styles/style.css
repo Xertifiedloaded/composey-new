@@ -31,13 +31,16 @@ body {
 .header {
     /* background-color: red; */
     position: fixed;
+    top: 0;
     z-index: 100;
     width: 100%;
     box-shadow: var(--box-shadow);
-    background-color: white;
+    /* background-color: white; */
 
 }
-
+.nav-active{
+    background: #ff0156;
+}
 .container {
     width: 85%;
     margin: 0 auto;
@@ -384,7 +387,10 @@ a:hover {
     transition: all 0.5s;
     scale: 1;
 }
-
+a:visited #header,
+#pricing {
+    transition: 5s ease-in-out;
+}
 .img1:hover {
     scale: 0.99;
 }
@@ -473,7 +479,9 @@ a:hover {
     border-radius: 10px;
 
 }
-
+.header-active{
+    background-color: red;
+}
 ul {
     list-style: none;
 }
@@ -887,6 +895,21 @@ sup {
         font-size: 18px;
         top: 50%;
     }
-
-
+.hide{
+    display: none;
+}
+.show{
+    display: flex;
+    justify-content: center;
+}
+.listing{
+    height: 100vh;
+    width: 100%;
+right: 0%;
+    position: fixed;
+    background: red;
+}
+body{
+  overflow: hidden;
+}
 }
